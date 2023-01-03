@@ -1,8 +1,4 @@
 const fooditem = document.querySelector('.food-container');
-// const closePopup = (elem) => {
-//   fooditem.classList.toggle('no-grid');
-  
-// };
 
 const popup = (items) => {
   const popupwindow = document.createElement('article');
@@ -10,7 +6,7 @@ const popup = (items) => {
   const btnclose = document.createElement('div');
   btnclose.classList.add('close');
   btnclose.innerHTML = '&times;';
-  const popdata = document.createElement('div')
+  const popdata = document.createElement('div');
   popdata.classList.add('pop-content');
   popdata.innerHTML = `
  <div class="food-details">
@@ -28,7 +24,6 @@ const popup = (items) => {
   popupwindow.appendChild(btnclose);
   popupwindow.appendChild(popdata);
   fooditem.appendChild(popupwindow);
-
 };
 
 const getcomments = async (id) => {

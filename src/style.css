@@ -105,11 +105,7 @@ body {
   padding: 10px;
 }
 
-
-
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 80%;
     margin: 0 auto;
@@ -117,10 +113,9 @@ body {
 
   .food-container {
     display: grid;
-    grid-template-columns: repeat(3,3fr);
+    grid-template-columns: repeat(3, 3fr);
     gap: 30px;
   }
-
 
   .food-container article {
     position: absolute;
@@ -129,7 +124,7 @@ body {
     width: 80%;
     background-color: #dfdada;
     color: blue;
-    border-radius: 1opx;
+    border-radius: 10px;
     padding: 8px;
     top: 60px;
     z-index: 1;
@@ -137,5 +132,5 @@ body {
 
   .food-details img {
     width: 500px;
-  } 
+  }
 }

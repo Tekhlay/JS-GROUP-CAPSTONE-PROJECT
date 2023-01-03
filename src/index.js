@@ -44,7 +44,6 @@ const getListitems = async (url) => {
 };
 
 linkbreakfast.addEventListener('click', () => {
-  linkbreakfast.style.cursor = 'pointer'
   getListitems(breakfasturl);
 });
 
