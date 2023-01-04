@@ -62,9 +62,23 @@ body {
 .reactions {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
   margin: 10px;
+}
+.comments {
+  background-color: #ca3030;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 20px;
 }
 
 .food-container article {
@@ -87,6 +101,7 @@ body {
 }
 
 .recipe {
+  width: 90%;
   text-align: justify;
   list-style: none;
 }
@@ -97,6 +112,23 @@ body {
   font-weight: 700;
   cursor: pointer;
   margin-right: 20px;
+}
+
+.comment-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.youtube {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #210f0f;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .footer-content {
@@ -118,7 +150,6 @@ body {
   }
 
   .food-container article {
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: 80%;

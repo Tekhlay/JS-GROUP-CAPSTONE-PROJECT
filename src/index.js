@@ -24,7 +24,8 @@ const displayitems = (element) => {
       <h3 class="food-title">${e.strMeal}</h3>
       <div class="reactions">
       <button class="comments">Coments</button>
-      <p class="likes">Likes</p>
+      <div class="likes"><i class="fa-solid fa-thumbs-up"></i>
+      <p class="likes">Likes</p> </div>
      </div> `;
     const comments = div.querySelector('.comments');
     comments.addEventListener('click', () => {
@@ -42,6 +43,10 @@ const getListitems = async (url) => {
   // console.log(data1);
   displayitems(data1);
 };
+
+window.addEventListener('load', () => {
+  getListitems(breakfasturl);
+});
 
 linkbreakfast.addEventListener('click', () => {
   getListitems(breakfasturl);
