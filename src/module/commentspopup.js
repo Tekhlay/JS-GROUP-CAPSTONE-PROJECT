@@ -26,7 +26,7 @@ const popup = (items) => {
   fooditem.appendChild(popupwindow);
 };
 
-const getcomments = async (id) => {
+const getdetails = async (id) => {
   const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(url + id);
   const response = await fetch(request);
@@ -36,4 +36,4 @@ const getcomments = async (id) => {
   // console.log(singleItem);
 };
 
-export { getcomments as default };
+export { getdetails as default };

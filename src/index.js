@@ -1,5 +1,5 @@
 import './style.css';
-import getcomments from './module/commentspopup.js';
+import getdetails from './module/commentspopup.js';
 
 const linkbreakfast = document.querySelector('.link-breakfast');
 const linkpasta = document.querySelector('.link-pasta');
@@ -28,7 +28,7 @@ const displayitems = (element) => {
      </div> `;
     const comments = div.querySelector('.comments');
     comments.addEventListener('click', () => {
-      getcomments(e.idMeal);
+      getdetails(e.idMeal);
     });
     fooditem.appendChild(div);
   });
