@@ -1,6 +1,6 @@
 import './style.css';
-import getdetails from './module/commentspopup.js';
 import { addLikes, getLikes } from './module/likes.js';
+import getdetails from './module/commentspopup.js';
 
 const linkbreakfast = document.querySelector('.link-breakfast');
 const linkpasta = document.querySelector('.link-pasta');
@@ -102,3 +102,5 @@ linkchicken.addEventListener('click', () => {
   linkbreakfast.style.textDecoration = 'none';
   linkpasta.style.textDecoration = 'none';
 });
+
+module.exports = itemCounter;
