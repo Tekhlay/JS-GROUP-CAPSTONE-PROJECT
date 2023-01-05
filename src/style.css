@@ -64,7 +64,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  justify-content: space-between;
   gap: 20px;
   margin: 10px;
 }
@@ -82,10 +81,10 @@ body {
   flex-direction: row;
   gap: 10px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .food-container article {
-  position: fixed;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -95,10 +94,6 @@ body {
   color: blue;
   border-radius: 6px;
   padding: 8px 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  overflow-y: scroll;
   top: 0;
   bottom: 0;
   z-index: 1;
@@ -113,7 +108,6 @@ body {
 }
 
 .recipe {
-  width: 90%;
   width: 90%;
   text-align: justify;
   list-style: none;
@@ -144,6 +138,42 @@ body {
   cursor: pointer;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.username,
+.msg {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btncomment {
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ca3030;
+  color: #dfdada;
+}
+
 .footer-content {
   font-size: 18px;
   font-weight: 600;
@@ -165,7 +195,6 @@ body {
   .food-container article {
     width: 80%;
     top: 60px;
-    bottom: 0;
     bottom: 0;
   }
 

@@ -1,5 +1,6 @@
-import { displayComents, getComments } from './comment.js';
+import { CommentForm, displayComents, getComments } from './comment.js';
 
+// counter for number of comments for a single item
 const communtCounter = (comment) => {
   let counter = comment.length;
   if (comment.error) {
@@ -7,8 +8,10 @@ const communtCounter = (comment) => {
   }
   return counter;
 };
+
 const fooditem = document.querySelector('.food-container');
 
+// Comments pop up menu
 const popup = (items, comments) => {
   // console.log(comments);
   const popupwindow = document.createElement('article');
@@ -19,6 +22,8 @@ const popup = (items, comments) => {
   const commentCard = document.createElement('div');
   commentCard.classList.add('comment-card');
   displayComents(comments, commentCard);
+  const newForm = document.createElement('div');
+  CommentForm(items.idMeal, newForm);
   const popdata = document.createElement('div');
   popdata.classList.add('pop-content');
   popdata.innerHTML = `
@@ -43,9 +48,11 @@ const popup = (items, comments) => {
   popupwindow.appendChild(btnclose);
   popupwindow.appendChild(popdata);
   popdata.appendChild(commentCard);
+  popdata.appendChild(newForm);
   fooditem.appendChild(popupwindow);
 };
 
+// get number of comments provided for a single item using item id
 const getdetails = async (id) => {
   const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(url + id);

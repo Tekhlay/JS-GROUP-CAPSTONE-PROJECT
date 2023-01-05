@@ -1,3 +1,46 @@
+// function to post new comment
+const addnewComent = async (id, name, msg) => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VvaW44DsT8GFdgGH7v4y/comments';
+  const request = new Request(url);
+  await fetch(request, {
+    method: 'POST',
+    body: JSON.stringify({ item_id: id, username: name, comment: msg }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  // eslint-disable-next-line no-use-before-define
+  const arr = getComments(id);
+  const dataCard = document.querySelector('.comment-card');
+  // eslint-disable-next-line no-use-before-define
+  displayComents(arr, dataCard);
+};
+const newComment = (id, name, msg) => {
+  if (name.value !== '' && msg.value !== '') {
+    addnewComent(id, name.value, msg.value);
+    name.value = '';
+    msg.value = '';
+  }
+};
+
+const CommentForm = (newcommetId, node) => {
+  const commentTitle = document.createElement('div');
+  commentTitle.classList.add('form-container');
+  commentTitle.innerHTML = '<h3> Add a Comment </h3>';
+  const form = document.createElement('form');
+  form.classList.add('form-content');
+  form.innerHTML = `<input type="text" class="username" placeholder="Your name" required >
+    <textarea class="msg" name="msg" id="" cols="30" rows="6" placeholder="Your insights" required ></textarea>
+    <button class="btncomment" type="button">Comment</button>`;
+  const btncomment = form.querySelector('.btncomment');
+  const username = form.querySelector('.username');
+  const msg = form.querySelector('.msg');
+  btncomment.addEventListener('click', () => newComment(newcommetId, username, msg));
+  commentTitle.appendChild(form);
+  node.appendChild(commentTitle);
+};
+
+// function to Display comments given for a single item
 const displayComents = (data, node) => {
   node.innerHTML = '';
   const commentitem = document.createElement('div');
@@ -11,7 +54,11 @@ const displayComents = (data, node) => {
   }
   node.appendChild(commentitem);
 };
+
+// address for comments API
 const link = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VvaW44DsT8GFdgGH7v4y/comments?item_id=';
+
+// get number of comments from the given API
 const getComments = async (id) => {
   const request = new Request(link + id);
   const response = await fetch(request);
@@ -19,4 +66,4 @@ const getComments = async (id) => {
   return comment;
   // console.log(comment);
 };
-module.exports = { displayComents, getComments };
+module.exports = { CommentForm, displayComents, getComments };
