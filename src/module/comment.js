@@ -4,7 +4,7 @@ const addnewComent = async (id, name, msg) => {
   const request = new Request(url);
   await fetch(request, {
     method: 'POST',
-    body: JSON.stringify({item_id: id, username: name, comment: msg,}),
+    body: JSON.stringify({ item_id: id, username: name, comment: msg }),
     headers: {
       'Content-Type': 'application/json',
     },
@@ -15,7 +15,6 @@ const addnewComent = async (id, name, msg) => {
   // eslint-disable-next-line no-use-before-define
   displayComents(arr, dataCard);
 };
-
 const newComment = (id, name, msg) => {
   if (name.value !== '' && msg.value !== '') {
     addnewComent(id, name.value, msg.value);

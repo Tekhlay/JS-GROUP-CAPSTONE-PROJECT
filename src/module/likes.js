@@ -18,5 +18,5 @@ const getLikes = async () => {
   const response = await fetch(request);
   const like = await response.json();
   return like;
-}
+};
 module.exports = { addLikes, getLikes };
