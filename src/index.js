@@ -54,7 +54,6 @@ const displayitems = (element) => {
       getLikes().then(likesCounter);
     });
 
-
     fooditem.appendChild(div);
   });
 };

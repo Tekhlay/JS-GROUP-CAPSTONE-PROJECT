@@ -14,10 +14,9 @@ const addLikes = async (id) => {
 
 // get number of likes
 const getLikes = async () => {
-    const request = new Request(url);
-    const response = await fetch(request);
-    const like = await response.json();
-    return like;
-  }
-  module.exports = { addLikes, getLikes };
-  
+  const request = new Request(url);
+  const response = await fetch(request);
+  const like = await response.json();
+  return like;
+};
+module.exports = { addLikes, getLikes };
