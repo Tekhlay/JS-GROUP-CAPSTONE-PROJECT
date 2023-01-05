@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import { communtCounter } from './module/commentspopup.js';
+// import { itemCounter } from './module/getALLitems.js';
 
 beforeAll(() => {
   document.body.innerHTML = `
@@ -26,7 +27,6 @@ beforeAll(() => {
       </div>`;
 });
 
-// const commentarr = ['comment1', 'comment2'];
 describe('Test Comment counter function ', () => {
   test('number of Comments equals 0', () => {
     const fooditem = document.querySelector('.food-container');
