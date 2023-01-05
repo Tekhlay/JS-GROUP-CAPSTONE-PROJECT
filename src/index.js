@@ -1,6 +1,5 @@
 import './style.css';
-import getcomments from './module/commentspopup.js';
-import { addLikes, getLikes } from './module/likes.js';
+import getdetails from './module/commentspopup.js';
 
 const linkbreakfast = document.querySelector('.link-breakfast');
 const linkpasta = document.querySelector('.link-pasta');
@@ -31,29 +30,15 @@ const displayitems = (element) => {
       <h3 class="food-title">${e.strMeal}</h3>
       <div class="reactions">
       <button class="comments">Coments</button>
-      <div class="likes"> </div>
+      <div class="likes"><i class="fa-solid fa-thumbs-up"></i>
+      <p class="likes">Likes</p> </div>
      </div> `;
     // const heartIcon = div.querySelector('.fa-heart');
     // heartIcon.addEventListener('click', addLike);
     const comments = div.querySelector('.comments');
     comments.addEventListener('click', () => {
-      getcomments(e.idMeal);
+      getdetails(e.idMeal);
     });
-
-    const numOflikes = div.querySelector('.likes');
-    // counter for number of likes for each item
-    const likesCounter = (like) => {
-      const likesfound = like.find((element) => element.item_id === e.idMeal);
-      numOflikes.innerHTML = likesfound !== undefined ? `<i class="fa-solid fa-thumbs-up"></i>(${likesfound.likes}) Likes` : '<i class="fa-solid fa-thumbs-up"></i>(0) Likes';
-    };
-    getLikes().then(likesCounter);
-
-    // Add new likes
-    numOflikes.addEventListener('click', () => {
-      addLikes(e.idMeal);
-      getLikes().then(likesCounter);
-    });
-
     fooditem.appendChild(div);
   });
 };
@@ -70,13 +55,9 @@ const getListitems = async (url) => {
   itemCounter(data1.length);
 };
 
-// console.log(getListitems(breakfasturl))
-
-// linkbreakfast.addEventListener('click', async () => {
-//   getListitems(breakfasturl);
-
-//   // linkbreakfast.innerHTML = `Breakfast (${displayitems(breakfasturl)})`;
-// });
+window.addEventListener('load', () => {
+  getListitems(breakfasturl);
+});
 
 linkbreakfast.addEventListener('click', () => {
   selected = linkbreakfast;
