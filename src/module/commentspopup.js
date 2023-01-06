@@ -9,11 +9,10 @@ const communtCounter = (comment) => {
   return counter;
 };
 
-const fooditem = document.querySelector('.food-container');
-
 // Comments pop up menu
 const popup = (items, comments) => {
   // console.log(comments);
+  const fooditem = document.querySelector('.food-container');
   const popupwindow = document.createElement('article');
   popupwindow.classList.add('popup-window');
   const btnclose = document.createElement('div');
@@ -63,4 +62,4 @@ const getdetails = async (id) => {
   popup(singleItem, commentData);
 };
 
-export { getdetails as default };
+export { communtCounter, getdetails as default };
