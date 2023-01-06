@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { communtCounter } from './module/commentspopup.js';
+import { communtCounter } from './module/comment.js';
 import { itemCounter } from './module/getALLitems.js';
 
 beforeAll(() => {

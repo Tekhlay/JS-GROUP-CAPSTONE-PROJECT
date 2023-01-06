@@ -1,14 +1,5 @@
 import { CommentForm, displayComents, getComments } from './comment.js';
 
-// counter for number of comments for a single item
-const communtCounter = (comment) => {
-  let counter = comment.length;
-  if (comment.error) {
-    counter = 0;
-  }
-  return counter;
-};
-
 // Comments pop up menu
 const popup = (items, comments) => {
   // console.log(comments);
@@ -38,7 +29,6 @@ const popup = (items, comments) => {
  <h4>Recipe Instructions </h4>
  <p class='recipe'> ${items.strInstructions} </p>
  <a class='youtube' href = "${items.strYoutube}"> Watch Tutorial on YouTube </a>
- <h4> Comments(${communtCounter(comments)}) </h4>
  </div>
   `;
   btnclose.addEventListener('click', () => {
@@ -46,8 +36,8 @@ const popup = (items, comments) => {
   });
   popupwindow.appendChild(btnclose);
   popupwindow.appendChild(popdata);
-  popdata.appendChild(commentCard);
-  popdata.appendChild(newForm);
+  popupwindow.appendChild(commentCard);
+  popupwindow.appendChild(newForm);
   fooditem.appendChild(popupwindow);
 };
 
@@ -62,4 +52,4 @@ const getdetails = async (id) => {
   popup(singleItem, commentData);
 };
 
-export { communtCounter, getdetails as default };
+export { getdetails as default };
