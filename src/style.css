@@ -126,10 +126,17 @@ header {
   margin-right: 20px;
 }
 
-.comment-items {
+.comment-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
+}
+
+.comment-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
   padding: 10px;
 }
