@@ -82,5 +82,5 @@ const getComments = async (id) => {
   // console.log(comment);
 };
 module.exports = {
-  communtCounter, CommentForm, displayComents, getComments 
+  communtCounter, CommentForm, displayComents, getComments,
 };
