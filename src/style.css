@@ -16,7 +16,6 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 150px;
 }
 
 .nav-bar {
@@ -26,12 +25,7 @@ header {
 .nav-item {
   list-style: none;
   display: flex;
-  gap: 100px;
   flex-direction: row;
-
-  /* border: 1px solid red; */
-
-  /* justify-content: space-around; */
 }
 
 .nav-item li {
@@ -132,17 +126,10 @@ header {
   margin-right: 20px;
 }
 
-.comment-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-}
-
 .comment-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   padding: 10px;
 }
@@ -199,9 +186,17 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    gap: 150px;
+  }
+
   .container {
     width: 80%;
     margin: 0 auto;
+  }
+
+  .nav-item {
+    gap: 100px;
   }
 
   .food-container {
