@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-
-
 <div align="center">
   
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
@@ -98,11 +96,11 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-[x] A web browser like Google Chrome or Firefox.
-[x] A code editor like Visual Studio Code with Git and Node.js
-[x] GIT
-In order to run this project you need:
+- [x] A web browser like Google Chrome or Firefox.
+- [x] A code editor like Visual Studio Code with Git and Node.js
+- [x] GIT
 
+In order to run this project you need:
 
 ```sh
 npm install
@@ -121,13 +119,12 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-
-``sh
+```sh
 cd my-project
 npm install
 npm run build
 
-````
+```
 
 ### Usage
 
@@ -140,7 +137,7 @@ Example command:
   rails server
 ````
 
---->
+-->
 
 ```sh
   npm run start
@@ -148,12 +145,16 @@ Example command:
 
 ### Run tests
 
-To run tests, run the following command: npm test
+To run tests, run the following command:
+
+```sh
+  npm install jest --save-dev
+  npm test
+```
 
 ### Deployment
 
-You can deploy this project using:
-
+You can deploy this project using: Using GitHub Pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,9 +182,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Add reservation section]**
+- [ ] **[Add delivery system section]**
+- [ ] **[Add order and billing info section]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -220,6 +221,5 @@ I would like to thank Microverse
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
