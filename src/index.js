@@ -1,9 +1,16 @@
 import './style.css';
+import menu from './images/menu.jpg';
 import getListitems from './module/getALLitems.js';
 
 const linkbreakfast = document.querySelector('.link-breakfast');
 const linkpasta = document.querySelector('.link-pasta');
 const linkchicken = document.querySelector('.link-chicken');
+
+const image = new Image();
+image.src = menu;
+image.style.width = '70px';
+const logoTag = document.querySelector('.logo');
+logoTag.appendChild(image);
 
 let selected = '';
 
