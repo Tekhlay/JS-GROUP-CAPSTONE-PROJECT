@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { communtCounter } from './module/commentspopup.js';
-// import { itemCounter } from './module/getALLitems.js';
+import { itemCounter } from './module/getALLitems.js';
 
 beforeAll(() => {
   document.body.innerHTML = `
@@ -58,5 +58,13 @@ describe('Test Comment counter function ', () => {
     const comments = fooditem.querySelectorAll('p');
     const count = communtCounter(comments);
     expect(count).toEqual(3);
+  });
+});
+
+describe('Test for item counter', () => {
+  test('Breakfast(7)', () => {
+    const linkbreakfast = document.querySelector('li');
+    itemCounter(linkbreakfast, 7);
+    expect(linkbreakfast.textContent).toEqual('Breakfast(7)');
   });
 });
