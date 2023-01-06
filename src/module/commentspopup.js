@@ -1,7 +1,5 @@
 import { CommentForm, displayComents, getComments } from './comment.js';
 
-
-
 // Comments pop up menu
 const popup = (items, comments) => {
   // console.log(comments);
