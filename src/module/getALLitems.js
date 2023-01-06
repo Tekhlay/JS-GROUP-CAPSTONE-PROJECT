@@ -1,11 +1,6 @@
 import getdetails from './commentspopup.js';
 import { addLikes, getLikes } from './likes.js';
 
-// All items counter for homepage
-export const itemCounter = (selected, item) => {
-  selected.innerHTML = `${selected.textContent}(${item})`;
-};
-
 const displayitems = (element) => {
   const fooditem = document.querySelector('.food-container');
   fooditem.innerHTML = '';
@@ -43,14 +38,19 @@ const displayitems = (element) => {
   });
 };
 
+// All items counter for homepage
+export const itemCounter = (selected, item) => {
+  selected.innerHTML = `${selected.textContent}(${item})`;
+};
+
 // Get item data from the given API's
 const getListitems = async (selected, url) => {
   const request = new Request(url);
   const response = await fetch(request);
   const data = await response.json();
   const data1 = data.meals;
-  displayitems(data1);
   itemCounter(selected, data1.length);
+  displayitems(data1);
 };
 
 export { getListitems as default };

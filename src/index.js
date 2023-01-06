@@ -21,7 +21,13 @@ const chickenurl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken
 
 // Display the first navigation bar items when the page refreshs
 window.addEventListener('load', () => {
+  selected = linkbreakfast;
+  linkpasta.textContent = 'Pasta';
+  linkchicken.textContent = 'Chicken';
   getListitems(selected, breakfasturl);
+  linkbreakfast.style.textDecoration = 'underline';
+  linkpasta.style.textDecoration = 'none';
+  linkchicken.style.textDecoration = 'none';
 });
 
 // Event for breakfast navigation bar
