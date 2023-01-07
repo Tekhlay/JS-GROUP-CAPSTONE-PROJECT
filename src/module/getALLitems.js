@@ -37,10 +37,9 @@ const displayitems = (element) => {
     fooditem.appendChild(div);
   });
 };
-
 // All items counter for homepage
 export const itemCounter = (selected, item) => {
-  selected.innerHTML = `${selected.textContent}(${item})`;
+  selected.innerHTML = `${selected.textContent} (${item})`;
 };
 
 // Get item data from the given API's

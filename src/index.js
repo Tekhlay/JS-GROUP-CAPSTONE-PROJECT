@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
 // Event for breakfast navigation bar
 linkbreakfast.addEventListener('click', () => {
   selected = linkbreakfast;
+  selected.textContent = 'Breakfast';
   linkpasta.textContent = 'Pasta';
   linkchicken.textContent = 'Chicken';
   getListitems(selected, breakfasturl);
@@ -44,6 +45,7 @@ linkbreakfast.addEventListener('click', () => {
 // Event for past navigation bar
 linkpasta.addEventListener('click', () => {
   selected = linkpasta;
+  selected.textContent = 'Pasta';
   linkbreakfast.textContent = 'Breakfast';
   linkchicken.textContent = 'Chicken';
   getListitems(selected, pastaurl);
@@ -55,6 +57,7 @@ linkpasta.addEventListener('click', () => {
 // Event for chicken navigation bar
 linkchicken.addEventListener('click', () => {
   selected = linkchicken;
+  selected.textContent = 'Chicken';
   linkbreakfast.textContent = 'Breakfast';
   linkpasta.textContent = 'Pasta';
   getListitems(selected, chickenurl);
